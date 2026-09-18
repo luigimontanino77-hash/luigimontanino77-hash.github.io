@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luigi Montanino | Avvocato & Ricercatore</title>
+  <title>Luigi Montanino | Avvocato e Ricercatore</title>
   <style>
     :root {
       --bg: #f5f0ea;
@@ -11,7 +11,6 @@
       --text: #1a1715;
       --muted: #5f5854;
       --accent: #6d3f2c;
-      --accent-soft: #ead7ce;
       --line: #e8ddd5;
       --shadow: 0 12px 34px rgba(32, 22, 17, 0.08);
     }
@@ -29,7 +28,7 @@
       line-height: 1.6;
     }
 
-    a { text-decoration: none; color: inherit; }
+    a { color: inherit; text-decoration: none; }
 
     .container {
       max-width: 1120px;
@@ -37,7 +36,7 @@
       padding: 0 20px;
     }
 
-    header { padding: 72px 0 38px; }
+    header { padding: 72px 0 80px; }
 
     .hero {
       display: grid;
@@ -48,11 +47,11 @@
 
     .eyebrow {
       display: inline-block;
+      margin-bottom: 18px;
+      color: var(--muted);
       font-size: 0.75rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 18px;
     }
 
     h1 {
@@ -80,10 +79,10 @@
     .btn {
       display: inline-block;
       padding: 14px 20px;
+      border: 1px solid transparent;
       border-radius: 999px;
       font-size: 0.96rem;
       transition: 0.2s ease;
-      border: 1px solid transparent;
     }
 
     .btn.primary {
@@ -95,18 +94,17 @@
     .btn.primary:hover { filter: brightness(1.06); }
 
     .btn.secondary {
-      background: transparent;
       border-color: var(--line);
-      color: var(--text);
+      background: transparent;
     }
 
-    .btn.secondary:hover { background: rgba(109,63,44,0.04); }
+    .btn.secondary:hover { background: rgba(109,63,44,0.05); }
 
     .profile-box {
-      background: var(--panel);
+      padding: 26px;
       border: 1px solid var(--line);
       border-radius: 22px;
-      padding: 26px;
+      background: var(--panel);
       box-shadow: var(--shadow);
     }
 
@@ -123,162 +121,29 @@
     }
 
     .profile-meta {
-      margin-top: 20px;
       display: grid;
       gap: 12px;
-      font-size: 0.92rem;
+      margin-top: 20px;
       color: var(--muted);
+      font-size: 0.92rem;
     }
 
     .meta-item {
       display: flex;
       justify-content: space-between;
-      align-items: center;
       gap: 10px;
       padding-top: 12px;
       border-top: 1px solid var(--line);
     }
 
-    .meta-item strong {
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    main { padding: 26px 0 80px; }
-
-    .section-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-bottom: 22px;
-    }
-
-    .section-head h3 {
-      margin: 0;
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-    }
-
-    .filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .chip {
-      border: 1px solid var(--line);
-      background: transparent;
-      color: var(--text);
-      padding: 10px 14px;
-      border-radius: 999px;
-      cursor: pointer;
-      font-size: 0.9rem;
-      transition: 0.2s ease;
-    }
-
-    .chip.active,
-    .chip:hover {
-      background: var(--accent);
-      color: white;
-      border-color: var(--accent);
-    }
-
-    .papers {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
-      margin-top: 18px;
-    }
-
-    .paper {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      transition: transform 0.18s ease, box-shadow 0.18s ease;
-    }
-
-    .paper:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 18px 30px rgba(32,22,17,0.10);
-    }
-
-    .paper-body { padding: 22px 22px 16px; }
-
-    .paper-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 14px;
-      color: var(--muted);
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .paper h4 {
-      margin: 0 0 12px;
-      font-size: 1.35rem;
-      line-height: 1.26;
-    }
-
-    .paper p {
-      margin: 0 0 18px;
-      color: var(--muted);
-      line-height: 1.7;
-      font-size: 0.98rem;
-    }
-
-    .paper-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      border-top: 1px solid var(--line);
-      padding: 14px 22px 18px;
-    }
-
-    .paper-footer span {
-      color: var(--muted);
-      font-size: 0.76rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .paper-footer a {
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .paper-footer a:hover { text-decoration: underline; }
-
-    .empty {
-      display: none;
-      text-align: center;
-      color: var(--muted);
-      padding: 30px 0;
-      font-style: italic;
-    }
+    .meta-item strong { color: var(--text); }
 
     footer {
-      padding: 0 0 40px;
-      text-align: center;
+      padding: 30px 20px 40px;
+      border-top: 1px solid var(--line);
       color: var(--muted);
       font-size: 0.88rem;
-      border-top: 1px solid var(--line);
-      padding-top: 30px;
+      text-align: center;
     }
 
     footer a {
@@ -300,15 +165,12 @@
           <div class="eyebrow">Diritto • Epistemologia Razionale • Logica</div>
           <h1>Luigi Montanino</h1>
           <p class="subtitle">
-            Avvocato e ricercatore. Studio dei modelli epistemici, della razionalità per agenti finiti nel tempo logico e analisi filosofico-giuridica.
+            Avvocato e ricercatore. Studio dei modelli epistemici, della razionalità per agenti finiti nel tempo logico e dell'analisi filosofico-giuridica.
           </p>
 
           <div class="actions">
             <a class="btn primary" href="https://philpeople.org/profiles/luigi-montanino" target="_blank" rel="noopener">
               Profilo PhilPeople
-            </a>
-            <a class="btn secondary" href="#papers">
-              Consulti i paper
             </a>
           </div>
         </div>
@@ -329,159 +191,11 @@
     </div>
   </header>
 
-  <main id="papers">
-    <div class="container">
-      <div class="section-head">
-        <h3>Saggi e Paper</h3>
-
-        <div class="filters" aria-label="Filtri">
-          <button class="chip active" data-filter="all">Tutti</button>
-          <button class="chip" data-filter="epistemologia">Epistemologia</button>
-          <button class="chip" data-filter="logica">Logica</button>
-          <button class="chip" data-filter="diritto">Filosofia del Diritto</button>
-        </div>
-      </div>
-
-      <section id="papers-grid" class="papers"></section>
-      <div id="empty" class="empty">Nessun articolo trovato per questa categoria.</div>
-    </div>
-  </main>
-
   <footer>
     <div class="container">
-      © 2026 Luigi Montanino — Tutti i testi sono pubblicati sotto licenza
-      <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.it" target="_blank" rel="noopener">
-        Creative Commons CC BY-NC 4.0
-      </a> (Condivisione e citazione consentite per fini non commerciali).
+      © 2026 Luigi Montanino —
+      <a href="https://philpeople.org/profiles/luigi-montanino" target="_blank" rel="noopener">Profilo PhilPeople</a>
     </div>
   </footer>
-
-  <script>
-    const papers = [
-      {
-        title: "Beyond Agrippa: Epistemic Rationality for Finite Agents in Logical Time",
-        year: "2026",
-        category: "epistemologia",
-        tag: "Epistemologia",
-        abstract: "Analisi strutturata del trilemma di Agrippa ed elaborazione di un modello di razionalità per agenti cognitivi finiti nel tempo logico.",
-        link: "https://philpeople.org/profiles/luigi-montanino"
-      },
-      {
-        title: "Toward a Structural Epistemology of Finite Agents",
-        year: "2026",
-        category: "epistemologia",
-        tag: "Epistemologia",
-        abstract: "Indagine sulle strutture epistemiche e sui vincoli computazionali e temporali negli agenti a risorse finite.",
-        link: "https://philpeople.org/profiles/luigi-montanino"
-      },
-      {
-        title: "Informational Linkage Gaps and the Limits of Rationality",
-        year: "2026",
-        category: "logica",
-        tag: "Logica & Epistemologia",
-        abstract: "Studio sulle discontinuità informative nei sistemi complessi e sul loro impatto nei processi di giustificazione logica.",
-        link: "https://philpeople.org/profiles/luigi-montanino"
-      },
-      {
-        title: "Epistemic Justification and Bounded Cognition",
-        year: "2025",
-        category: "epistemologia",
-        tag: "Epistemologia",
-        abstract: "Modelli di giustificazione epistemica applicati ad ambienti ad alta incertezza e risorse cognitive limitate.",
-        link: "https://philpeople.org/profiles/luigi-montanino"
-      },
-      {
-        title: "Logical Time and Dynamic Belief Revision",
-        year: "2025",
-        category: "logica",
-        tag: "Logica",
-        abstract: "Formalizzazione delle dinamiche di revisione delle credenze lungo assi temporali discreti e sequenziali.",
-        link: "https://philpeople.org/profiles/luigi-montanino"
-      },
-      {
-        title: "Normative Structures in Legal Reasoning",
-        year: "2025",
-        category: "diritto",
-        tag: "Filosofia del Diritto",
-        abstract: "Analisi logico-strutturale dell'argomentazione giuridica e dei principi di decisione nel patrocinio forense.",
-        link: "https://philpeople.org/profiles/luigi-montanino"
-      },
-      {
-        title: "Agrippa's Trilemma and Computational Constraints",
-        year: "2024",
-        category: "epistemologia",
-        tag: "Epistemologia",
-        abstract: "Rilettura in chiave computazionale delle tre vie tradizionali dello scetticismo antico.",
-        link: "https://philpeople.org/profiles/luigi-montanino"
-      },
-      {
-        title: "Foundationalism vs. Coherentism in Finite Systems",
-        year: "2024",
-        category: "epistemologia",
-        tag: "Epistemologia",
-        abstract: "Confronto critico tra fondazionalismo e coerentismo all'interno di architetture informative finite.",
-        link: "https://philpeople.org/profiles/luigi-montanino"
-      },
-      {
-        title: "Uncertainty, Evidence, and Epistemic Risk",
-        year: "2024",
-        category: "logica",
-        tag: "Logica & Epistemologia",
-        abstract: "Valutazione del rischio epistemico e della gestione della prova in condizioni di informazione incompleta.",
-        link: "https://philpeople.org/profiles/luigi-montanino"
-      },
-      {
-        title: "Rational Agency in Non-Ideal Conditions",
-        year: "2023",
-        category: "epistemologia",
-        tag: "Epistemologia",
-        abstract: "Saggio sui modelli di agenzia razionale operanti in contesti reali e non ideali.",
-        link: "https://philpeople.org/profiles/luigi-montanino"
-      }
-    ];
-
-    const papersGrid = document.getElementById("papers-grid");
-    const empty = document.getElementById("empty");
-    const chips = document.querySelectorAll(".chip");
-
-    function renderPapers(filter = "all") {
-      const filtered = filter === "all"
-        ? papers
-        : papers.filter(p => p.category === filter);
-
-      papersGrid.innerHTML = "";
-
-      filtered.forEach(p => {
-        const article = document.createElement("article");
-        article.className = "paper";
-        article.innerHTML = `
-          <div class="paper-body">
-            <div class="paper-meta">
-              <span>${p.year}</span>
-              <span class="tag">${p.tag}</span>
-            </div>
-            <h4>${p.title}</h4>
-            <p>${p.abstract}</p>
-          </div>
-          <div class="paper-footer">
-            <span>PhilPapers</span>
-            <a href="${p.link}" target="_blank" rel="noopener">Leggi / Scheda</a>
-          </div>
-        `;
-        papersGrid.appendChild(article);
-      });
-
-      empty.style.display = filtered.length === 0 ? "block" : "none";
-    }
-
-    chips.forEach(chip => {
-      chip.addEventListener("click", () => {
-        chips.forEach(c => c.classList.toggle("active", c === chip));
-        renderPapers(chip.dataset.filter);
-      });
-    });
-
-    renderPapers();
-  </script>
 </body>
 </html>
