@@ -6,55 +6,136 @@
   <title>Luigi Montanino | Avvocato e Ricercatore</title>
   <meta name="description" content="Sito ufficiale dell'Avv. Luigi Montanino. Studio legale a Roccarainola (NA), assistenza e difesa in diritto penale, ricerca indipendente in epistemologia e logica formale." />
   <style>
-    :root { --bg:#f5f0ea; --panel:#fffdfb; --text:#1a1715; --muted:#5f5854; --accent:#6d3f2c; --accent-soft:#ead7ce; --line:#e8ddd5; --shadow:0 12px 34px rgba(32,22,17,.08); }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; font-family:Georgia,"Times New Roman",serif; background:radial-gradient(circle at top,rgba(109,63,44,.10),transparent 32%),linear-gradient(to bottom,var(--bg),#efe7e2); color:var(--text); line-height:1.6; }
-    a { color:inherit; text-decoration:none; }
-    .container { max-width:1100px; margin:0 auto; padding:0 20px; }
-    header { padding:64px 0 44px; }
-    .hero { display:grid; grid-template-columns:1.4fr .8fr; gap:36px; align-items:center; }
-    .eyebrow { display:inline-block; margin-bottom:18px; color:var(--muted); font-size:.75rem; letter-spacing:.18em; text-transform:uppercase; }
-    h1 { margin:0; font-size:clamp(2.8rem,6vw,5.2rem); line-height:.96; font-weight:600; letter-spacing:-.05em; }
-    .subtitle { max-width:650px; margin-top:18px; color:var(--muted); font-size:1.12rem; }
-    .actions,nav { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
-    .btn { display:inline-block; padding:12px 18px; border:1px solid var(--line); border-radius:999px; font-size:.95rem; transition:.2s ease; }
-    .btn.primary { background:var(--accent); color:#fff; border-color:var(--accent); box-shadow:var(--shadow); }
-    .btn:hover { transform:translateY(-1px); }
-    .profile-box,.bio-box,.professional-card,.paper { background:var(--panel); border:1px solid var(--line); border-radius:20px; box-shadow:var(--shadow); }
-    .profile-box { padding:26px; }
-    .profile-box h2,.section-title { margin:0 0 14px; }
-    .profile-box p,.bio-box p { color:var(--muted); }
-    .profile-meta { display:grid; gap:12px; margin-top:20px; color:var(--muted); font-size:.92rem; }
-    .meta-item { display:flex; justify-content:space-between; gap:10px; padding-top:12px; border-top:1px solid var(--line); }
-    .meta-item strong { color:var(--text); }
-    main { padding:20px 0 70px; }
-    .section { padding:34px 0; scroll-margin-top:20px; }
-    .section-title { font-size:clamp(1.9rem,3vw,2.7rem); }
-    .section-intro { max-width:780px; margin:0 0 24px; color:var(--muted); font-size:1.05rem; }
-    .bio-box { padding:30px; }
-    .bio-box h3 { margin:0 0 20px; font-size:1.35rem; color:var(--accent); }
-    .bio-box p { margin:0 0 14px; line-height:1.8; }
-    .bio-box p:last-child { margin-bottom:0; }
-    .professional-card { padding:30px; }
-    .label,.paper-label { display:inline-block; padding:6px 10px; border-radius:999px; background:var(--accent-soft); color:var(--accent); font-size:.75rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; }
-    .professional-card h3 { margin:14px 0 22px; font-size:clamp(1.6rem,3vw,2.4rem); }
-    .professional-copy { margin:0 0 24px; color:var(--text); font-size:1.02rem; line-height:1.8; }
-    .info-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px 26px; }
-    .info-item { display:flex; flex-direction:column; gap:4px; }
-    .small { color:var(--muted); font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; }
-    .info-item strong { font-size:1.05rem; }
-    .info-item a,.bio-box a { color:var(--accent); text-decoration:underline; }
-    .papers { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:22px; }
-    .paper { display:flex; flex-direction:column; justify-content:space-between; min-height:210px; padding:24px; transition:transform .18s ease,box-shadow .18s ease; }
-    .paper:hover { transform:translateY(-2px); box-shadow:0 18px 30px rgba(32,22,17,.10); }
-    .paper-label { margin-bottom:16px; }
-    .paper h3 { margin:0 0 22px; font-size:1.28rem; line-height:1.35; }
-    .paper-link { color:var(--accent); font-weight:600; }
-    .paper-link:hover { text-decoration:underline; }
-    footer { padding:30px 20px 40px; border-top:1px solid var(--line); color:var(--muted); text-align:center; font-size:.88rem; }
-    footer a { color:var(--accent); text-decoration:underline; }
-    @media (max-width:820px) { .hero { grid-template-columns:1fr; } .profile-box { max-width:560px; } }
+    :root {
+      --bg: #f4efe9;
+      --panel: #fffdfb;
+      --text: #1a1715;
+      --muted: #5d5652;
+      --accent: #6e4030;
+      --accent-soft: #ead7cf;
+      --line: #e7dcd4;
+      --shadow: 0 14px 34px rgba(32, 22, 17, 0.07);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: radial-gradient(circle at top, rgba(110,64,48,0.12), transparent 28%), linear-gradient(to bottom, var(--bg), #f0e8e2);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    header { padding: 72px 0 44px; }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.8rem, 5.2vw, 5rem);
+      line-height: 0.95;
+      letter-spacing: -0.06em;
+      font-weight: 600;
+    }
+    .subtitle {
+      margin-top: 20px;
+      max-width: 640px;
+      color: var(--muted);
+      font-size: 1.12rem;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 20px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      font-size: 0.96rem;
+      transition: 0.2s ease;
+    }
+    .btn.primary {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+      box-shadow: var(--shadow);
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .mini-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 26px;
+    }
+    .mini-card h2 {
+      margin: 0 0 10px;
+      font-size: 1.7rem;
+    }
+    .mini-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 22px;
+      margin-top: 40px;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+    .tag {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+    }
+    .panel h3 {
+      margin: 18px 0 14px;
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    }
+    .panel p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+    footer {
+      margin-top: 40px;
+      padding: 28px 20px 42px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.88rem;
+    }
+    footer a { color: var(--accent); text-decoration: underline; }
+    @media (max-width: 820px) {
+      .hero { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -62,80 +143,44 @@
     <div class="container">
       <div class="hero">
         <div>
-          <div class="eyebrow">Diritto • Epistemologia Razionale • Logica</div>
+          <div class="eyebrow">Diritto • Epistemologia • Logica</div>
           <h1>Luigi Montanino</h1>
-          <p class="subtitle">Avvocato iscritto al Foro di Nola e ricercatore indipendente in epistemologia formale. Coniugo il rigore del diritto applicato con l’analisi critica della razionalità, dell’incertezza e della giustificazione.</p>
+          <p class="subtitle">Avvocato iscritto al Foro di Nola e ricercatore indipendente in epistemologia formale. Coniugo il rigore della pratica forense con l’analisi critica della razionalità, dell’incertezza e della giustificazione.</p>
           <div class="actions">
-            <a class="btn primary" href="#profilo-professionale">Profilo avvocato</a>
-            <a class="btn" href="#profilo-accademico">Profilo ricercatore</a>
+            <a class="btn primary" href="avvocato.html">Profilo avvocato</a>
+            <a class="btn" href="ricerca.html">Profilo ricercatore</a>
           </div>
         </div>
-        <aside class="profile-box">
+        <aside class="mini-card">
           <h2>In breve</h2>
-          <p>Filosofia analitica, epistemologia formale, logica applicata e diritto penale.</p>
-          <div class="profile-meta">
-            <div class="meta-item"><strong>Ricerca</strong><span>Agenti finiti</span></div>
-            <div class="meta-item"><strong>Professione</strong><span>Avvocato</span></div>
-            <div class="meta-item"><strong>ORCID</strong><span><a href="https://orcid.org/0009-0005-5196-7136" target="_blank" rel="noopener">0009-0005-5196-7136</a></span></div>
-            <div class="meta-item"><strong>Profilo</strong><span><a href="https://philpeople.org/profiles/luigi-montanino" target="_blank" rel="noopener">PhilPapers / PhilPeople</a></span></div>
-          </div>
+          <p>Studio del diritto penale e ricerca indipendente in epistemologia, logica applicata e struttura dell’argomentazione.</p>
         </aside>
       </div>
     </div>
   </header>
 
   <main>
-    <section id="profilo-accademico" class="section">
-      <div class="container">
-        <h2 class="section-title">Profilo ricercatore</h2>
-        <p class="section-intro">Ricerca indipendente nell’ambito della filosofia analitica e dell’epistemologia formale.</p>
-        <div class="bio-box">
-          <h3>Oggetto della ricerca</h3>
-          <p>La ricerca si concentra sulla modellizzazione della razionalità per agenti finiti, con particolare attenzione alle dinamiche del tempo logico, alla gestione dell’incertezza e ai problemi della giustificazione epistemica, tra cui il Trilemma di Agrippa.</p>
-          <p>I lavori esplorano inoltre le intersezioni tra logica applicata, epistemologia della conoscenza e struttura dell’argomentazione giuridica.</p>
-          <p>Contributi scientifici e profili accademici sono consultabili su <a href="https://philpeople.org/profiles/luigi-montanino" target="_blank" rel="noopener"><strong>PhilPapers e PhilPeople</strong></a> e su <a href="https://orcid.org/0009-0005-5196-7136" target="_blank" rel="noopener"><strong>ORCID</strong></a>.</p>
-        </div>
+    <div class="container">
+      <div class="grid">
+        <article class="panel">
+          <span class="tag">Professione</span>
+          <h3>Profilo avvocato</h3>
+          <p>Assistenza, consulenza e difesa in ambito civile e penale, con attenzione alla tutela dei diritti del cliente e alla gestione delle dinamiche processuali.</p>
+          <a class="btn primary" href="avvocato.html">Scopri di più</a>
+        </article>
 
-        <h2 class="section-title" style="margin-top:46px;">Paper</h2>
-        <section class="papers" aria-label="Paper filosofici">
-          <article class="paper"><div><span class="paper-label">Paper</span><h3><a href="https://philpapers.org/rec/MONBAE-2" target="_blank" rel="noopener">Beyond Agrippa: Epistemic Rationality for Finite Agents in Logical Time</a></h3></div><a class="paper-link" href="https://philpapers.org/rec/MONBAE-2" target="_blank" rel="noopener">Leggi la scheda →</a></article>
-          <article class="paper"><div><span class="paper-label">Paper</span><h3><a href="https://philpapers.org/rec/MONSSO-3" target="_blank" rel="noopener">Superposed States of an Unlimited Agent</a></h3></div><a class="paper-link" href="https://philpapers.org/rec/MONSSO-3" target="_blank" rel="noopener">Leggi la scheda →</a></article>
-          <article class="paper"><div><span class="paper-label">Paper</span><h3><a href="https://philpapers.org/rec/MONSSD-8" target="_blank" rel="noopener">Stati Sovrapposti di un Agente Illimitato</a></h3></div><a class="paper-link" href="https://philpapers.org/rec/MONSSD-8" target="_blank" rel="noopener">Leggi la scheda →</a></article>
-          <article class="paper"><div><span class="paper-label">Paper</span><h3><a href="https://philpapers.org/rec/MONPIA-8" target="_blank" rel="noopener">Personal Identity as a Space of Constraints: Persistence, Collapse, and Typological Drift in the Human Subject</a></h3></div><a class="paper-link" href="https://philpapers.org/rec/MONPIA-8" target="_blank" rel="noopener">Leggi la scheda →</a></article>
-          <article class="paper"><div><span class="paper-label">Paper</span><h3><a href="https://philpapers.org/rec/MONWMD-2" target="_blank" rel="noopener">Beyond Reasonable Doubt as a Structural Epistemic Threshold</a></h3></div><a class="paper-link" href="https://philpapers.org/rec/MONWMD-2" target="_blank" rel="noopener">Leggi la scheda →</a></article>
-          <article class="paper"><div><span class="paper-label">Paper</span><h3><a href="https://philpapers.org/rec/MONIAA-3" target="_blank" rel="noopener">Toward a Structural Epistemology of Finite Agents</a></h3></div><a class="paper-link" href="https://philpapers.org/rec/MONIAA-3" target="_blank" rel="noopener">Leggi la scheda →</a></article>
-          <article class="paper"><div><span class="paper-label">Paper</span><h3><a href="https://philpapers.org/rec/MONILG" target="_blank" rel="noopener">Scaling Is Not Enough: Informational Linkage Gaps and the Structural Limits of Large Language Models</a></h3></div><a class="paper-link" href="https://philpapers.org/rec/MONILG" target="_blank" rel="noopener">Leggi la scheda →</a></article>
-          <article class="paper"><div><span class="paper-label">Paper</span><h3><a href="https://philpapers.org/rec/MONESA-6" target="_blank" rel="noopener">Empirical Symmetry as a Relational Phenomenon: Informational Linkage Gaps and Agent-Relative Irreducibility</a></h3></div><a class="paper-link" href="https://philpapers.org/rec/MONESA-6" target="_blank" rel="noopener">Leggi la scheda →</a></article>
-          <article class="paper"><div><span class="paper-label">Paper</span><h3><a href="https://philpapers.org/rec/MONBRD-2" target="_blank" rel="noopener">Beyond Reasonable Doubt as a Structural Epistemic Threshold</a></h3></div><a class="paper-link" href="https://philpapers.org/rec/MONBRD-2" target="_blank" rel="noopener">Leggi la scheda →</a></article>
-          <article class="paper"><div><span class="paper-label">Paper</span><h3><a href="https://philpapers.org/rec/MONTAS-3" target="_blank" rel="noopener">Toward a Structural Epistemology of Finite Agents</a></h3></div><a class="paper-link" href="https://philpapers.org/rec/MONTAS-3" target="_blank" rel="noopener">Leggi la scheda →</a></article>
-        </section>
+        <article class="panel">
+          <span class="tag">Ricerca</span>
+          <h3>Profilo ricercatore</h3>
+          <p>Studio della razionalità per agenti finiti, tempo logico, incertezza epistemica, giustificazione e logica applicata alla teoria del diritto.</p>
+          <a class="btn" href="ricerca.html">Scopri di più</a>
+        </article>
       </div>
-    </section>
-
-    <section id="profilo-professionale" class="section">
-      <div class="container">
-        <h2 class="section-title">Profilo avvocato</h2>
-        <p class="section-intro">Attività forense nel settore del diritto penale, con patrocinio e consulenza legale.</p>
-        <div class="professional-card">
-          <span class="label">Avvocato</span>
-          <h3>Luigi Montanino</h3>
-          <p class="professional-copy">Avvocato iscritto all’Ordine degli Avvocati del Foro di Nola, con studio a Roccarainola (NA). Svolge attività di assistenza, consulenza e difesa in ambito civile e penale, coniugando l’approccio analitico e il rigore argomentativo con la tutela effettiva dei diritti del cliente e la gestione delle dinamiche processuali.</p>
-          <div class="actions"><a class="btn primary" href="tel:+393345005957">Contatta lo studio</a></div>
-          <div class="info-grid">
-            <div class="info-item"><span class="small">Ordine</span><strong>Ordine degli Avvocati di Nola</strong></div>
-            <div class="info-item"><span class="small">Iscrizione</span><strong>03/06/2020</strong></div>
-            <div class="info-item"><span class="small">Settore</span><strong>Diritto penale</strong></div>
-            <div class="info-item"><span class="small">Difensore d'ufficio</span><strong>Sì</strong></div>
-            <div class="info-item"><span class="small">Domicilio professionale</span><strong>Roccarainola (NA)</strong></div>
-            <div class="info-item"><span class="small">Telefono</span><strong><a href="tel:+393345005957">334 500 5957</a></strong></div>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
   </main>
 
   <footer>
-    <div class="container">© 2026 Luigi Montanino — <a href="https://philpeople.org/profiles/luigi-montanino" target="_blank" rel="noopener">Profilo PhilPeople</a> · <a href="https://orcid.org/0009-0005-5196-7136" target="_blank" rel="noopener">ORCID</a></div>
+    <div class="container">© 2026 Luigi Montanino — <a href="https://philpeople.org/profiles/luigi-montanino" target="_blank" rel="noopener">PhilPapers</a> · <a href="https://orcid.org/0009-0005-5196-7136" target="_blank" rel="noopener">ORCID</a></div>
   </footer>
 </body>
 </html>
