@@ -30,8 +30,14 @@
     .label { color: var(--muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; }
     strong { font-size: 1.04rem; }
     strong a { color: var(--accent); text-decoration: underline; }
+    .studio-layout { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 24px; align-items: center; margin-top: 28px; }
+    .studio-photo { overflow: hidden; border-radius: 22px; border: 1px solid var(--line); box-shadow: var(--shadow); background: #efe7df; }
+    .studio-photo img { display: block; width: 100%; height: auto; min-height: 340px; object-fit: cover; }
+    .statement { margin: 0; color: var(--muted); font-size: 1.03rem; }
+    .statement strong { color: var(--text); }
     footer { padding: 30px 20px 42px; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: .88rem; }
     footer a { color: var(--accent); text-decoration: underline; }
+    @media (max-width: 760px) { .studio-layout { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -50,7 +56,7 @@
   <main>
     <div class="container hero">
       <h1>Avvocato e difensore.</h1>
-      <p class="lead">Avvocato iscritto all’Ordine degli Avvocati del Foro di Nola, con studio a Roccarainola (NA). Svolge attività di assistenza, consulenza e difesa in ambito civile e penale, coniugando l’approccio analitico e il rigore argomentativo con la tutela effettiva dei diritti del cliente.</p>
+      <p class="lead">Avvocato iscritto all’Ordine degli Avvocati del Foro di Nola, con studio a Roccarainola (NA). Svolge attività di assistenza, consulenza e difesa in ambito civile e penale, con particolare attenzione alla tutela dei diritti del cliente e alla corretta pianificazione delle strategie processuali.</p>
       <div class="cta">
         <a class="btn primary" href="tel:+393345005957">Contatta lo studio</a>
         <a class="btn" href="mailto:luigimontanino77@gmail.com">Scrivi via email</a>
@@ -58,6 +64,16 @@
     </div>
 
     <div class="container">
+      <div class="studio-layout">
+        <div class="studio-photo">
+          <img src="images/studio-legale.jpg" alt="Studio legale Luigi Montanino" />
+        </div>
+        <div class="card" style="margin-top:0;">
+          <h2>Approccio professionale</h2>
+          <p class="statement"><strong>La pianificazione della strategia migliore è la soluzione migliore.</strong> Non mi fermo alla prima risposta possibile: valuto le alternative, le conseguenze e gli impliciti effetti di ogni scelta per costruire un approccio sistemico, coerente e realmente orientato alla tutela del cliente.</p>
+        </div>
+      </div>
+
       <div class="card">
         <div class="meta">
           <div class="meta-item"><span class="label">Ordine</span><strong>Ordine degli Avvocati di Nola</strong></div>
@@ -73,7 +89,7 @@
   </main>
 
   <footer>
-    <div class="container">© 2026 Luigi Montanino — <a href="https://philpeople.org/profiles/luigi-montanino" target="_blank" rel="noopener">PhilPeople</a> · <a href="mailto:luigimontanino77@gmail.com">luigimontanino77@gmail.com</a></div>
+    <div class="container">© 2026 Luigi Montanino — <a href="https://philpeople.org/profiles/luigi-montanino" target="_blank" rel="noopener">PhilPeople</a> · <a href="mailto:luigimontanino77@gmail.com">Email</a> · <a href="tel:+393345005957">Telefono</a></div>
   </footer>
 </body>
 </html>
